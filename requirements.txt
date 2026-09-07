@@ -1,0 +1,23 @@
+# Part I - Foundations & Continuous Optimization
+numpy
+matplotlib
+scipy
+sympy
+
+# Part II - Linear & Integer Programming (uncomment when this part lands)
+# pulp
+# ortools
+
+# Part III - Combinatorial Optimization & Metaheuristics
+# (no new dependencies - numpy/matplotlib above are enough)
+
+# Part IV - Quadratic Optimization & The Bridge to QUBO
+# cvxpy
+
+# Part V - QUBO: Formulation & Solving
+# dimod
+# dwave-samplers
+# qubovert
+
+# Jupyter, to actually open the notebooks
+notebook
