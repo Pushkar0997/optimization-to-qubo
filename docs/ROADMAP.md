@@ -4,7 +4,7 @@ Build status for the curriculum. Updated as each chapter lands. Full topic detai
 
 ## Part I — Foundations & Continuous Optimization
 - [x] 1.1 What Is Optimization?
-- [ ] 1.2 Calculus Refresher & Gradient Descent
+- [x] 1.2 Calculus Refresher & Gradient Descent
 - [ ] 1.3 Newton's Method, `scipy.optimize` & Constraints Intro
 - [ ] Part I Mini-Project
 
