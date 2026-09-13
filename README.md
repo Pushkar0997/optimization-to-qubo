@@ -14,14 +14,14 @@ No prior optimization background assumed. Comfort with basic Python (functions, 
 
 | Part | Topic | Status |
 |---|---|---|
-| I | Foundations & Continuous Optimization | ✅ Chapter 1.1 live |
+| I | Foundations & Continuous Optimization | ✅ Chapters 1.1–1.2 live |
 | II | Linear & Integer Programming | 🚧 planned |
 | III | Combinatorial Optimization & Metaheuristics | 🚧 planned |
 | IV | Quadratic Optimization & The Bridge to QUBO | 🚧 planned |
 | V | QUBO: Formulation & Solving | 🚧 planned |
 | VI | Capstone Project | 🚧 planned |
 
-Each part is one cumulative Jupyter notebook: markdown explanations, runnable code with real (executed, not just described) outputs, and exercises with worked solutions.
+Each chapter (from 1.3 onward) is its own notebook — markdown explanations, runnable code with real (executed, not just described) outputs, and exercises with worked solutions. Two docs carry the connections between chapters: each Part's `SYNTHESIS.md`, and [docs/THREADS.md](docs/THREADS.md) for the longer threads that span multiple Parts. *(Chapters 1.1–1.2 predate this convention and share one cumulative notebook — see the note in [CURRICULUM.md](CURRICULUM.md).)*
 
 ## Getting started
 
@@ -42,13 +42,17 @@ optimization-to-qubo/
 ├── docs/
 │   ├── SPEC.md             learning objectives, audience, scope, acceptance criteria
 │   ├── STYLE_GUIDE.md      conventions every notebook follows
-│   └── ROADMAP.md          build status
+│   ├── ROADMAP.md          build status
+│   └── THREADS.md          connections that span multiple Parts
 ├── 01-foundations/
-├── 02-linear-integer-programming/
+│   ├── 01_foundations.ipynb   Chapters 1.1-1.2 (predates the per-chapter convention)
+│   ├── SYNTHESIS.md           how this Part's chapters connect
+│   └── 1.3_*.ipynb, ...       Chapter 1.3 onward: one notebook per chapter
+├── 02-linear-integer-programming/   (N.M_topic.ipynb + SYNTHESIS.md + mini-project, per chapter)
 ├── 03-combinatorial-metaheuristics/
 ├── 04-quadratic-penalty/
 ├── 05-qubo/
-├── 06-capstone/
+├── 06-capstone/           one notebook by design - a single project, not separate lessons
 └── resources/
     └── READING_LIST.md    complementary + supplementary reading, by part
 ```

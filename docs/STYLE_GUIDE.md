@@ -4,12 +4,21 @@ Conventions every notebook and doc in this repo follows. The point is consistenc
 
 ## Notebook shape
 
-Every notebook is one cumulative file per Part, with sections added chapter by chapter. Each chapter section follows the same pattern:
+Each chapter gets its own standalone notebook — deep, self-contained, and readable without needing a previous chapter's notebook open. Every chapter notebook follows the same internal pattern, chapter by chapter within it if the topic has sub-parts:
 
 1. **Concept** — a markdown cell introducing the idea, always closing with a one- or two-line "why this matters for QUBO" thread-back to the end goal.
 2. **Code** — one or more code cells making the concept concrete, always executed with real (not fabricated) outputs embedded.
 3. **Exercise** — a markdown cell posing a small, single-concept problem.
 4. **Solution** — a markdown cell with worked reasoning, followed by a code cell that verifies the reasoning computationally wherever possible (see "Verification ethos" below).
+
+Two layers carry the connections *between* chapters, so nothing feels like an isolated island:
+
+- **`SYNTHESIS.md`, one per Part** — prose, not code. Narrates how that Part's own chapters build on each other.
+- **The Part's mini-project notebook** — the hands-on version of that same synthesis: one problem that genuinely needs every chapter in the Part, not just the most recent one.
+
+Connections that span *multiple* Parts (the longer threads) live in `docs/THREADS.md`, updated as each one actually gets built rather than just planned.
+
+**Exceptions, stated explicitly rather than left implicit:** `01-foundations/01_foundations.ipynb` (Chapters 1.1–1.2) predates this convention and stays a cumulative file — restructuring it after the fact wasn't worth it. The capstone (Part VI) is intentionally one file too, but for a different reason: its five stages are steps of one project, not separate lessons.
 
 ## Verification ethos
 
@@ -34,8 +43,9 @@ No claim in any notebook is asserted without being checked in code first. If a h
 
 ## Naming
 
-- Notebooks: `NN_topic.ipynb`, numbered to match the folder.
+- Notebooks: `N.M_topic-with-hyphens.ipynb`, where `N.M` is the exact chapter number from [CURRICULUM.md](../CURRICULUM.md) — e.g., `2.1_lp_formulation_geometry.ipynb`. Mini-projects: `N_mini_project.ipynb`.
 - Folders: `NN-topic-with-hyphens`, numbered to match [CURRICULUM.md](../CURRICULUM.md)'s Part ordering.
+- Synthesis docs: `SYNTHESIS.md`, one per Part folder.
 
 ## Reading-list tiers
 
